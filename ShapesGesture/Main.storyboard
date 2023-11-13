@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ShapesGesture" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ixx-Fo-rbB">
+                                <rect key="frame" x="10" y="638" width="373" height="180"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="center" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2gc-4L-qQc">
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="50"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ddx-q4-TFo">
+                                                <rect key="frame" x="0.0" y="0.0" width="93.333333333333329" height="50"/>
+                                                <subviews>
+                                                    <slider opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="ImL-IV-deW">
+                                                        <rect key="frame" x="-2" y="0.0" width="97.333333333333329" height="31"/>
+                                                        <color key="minimumTrackTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="maximumTrackTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </slider>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Line Width" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lSP-rh-Ael">
+                                                        <rect key="frame" x="0.0" y="30" width="93.333333333333329" height="20"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="3c1-1E-RZ3">
+                                                <rect key="frame" x="93.333333333333343" y="0.0" width="93.333333333333343" height="50"/>
+                                                <subviews>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="fill" contentVerticalAlignment="bottom" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ddu-is-TPu">
+                                                        <rect key="frame" x="22" y="0.0" width="51" height="31"/>
+                                                        <connections>
+                                                            <action selector="fillShapeSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="e3J-1I-OWg"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Fill Shape" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpQ-U9-a7Z">
+                                                        <rect key="frame" x="10" y="34" width="73.333333333333329" height="16"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <colorWell contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" title="Select Fill Color" translatesAutoresizingMaskIntoConstraints="NO" id="VFu-j8-cMQ">
+                                                <rect key="frame" x="186.66666666666666" y="0.0" width="92.999999999999972" height="50"/>
+                                            </colorWell>
+                                            <colorWell contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" title="Select Stroke Color" translatesAutoresizingMaskIntoConstraints="NO" id="ovp-OS-Lvv">
+                                                <rect key="frame" x="279.66666666666669" y="0.0" width="93.333333333333314" height="50"/>
+                                            </colorWell>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="PjQ-7l-t7l"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="rRi-Nd-YuJ">
+                                        <rect key="frame" x="0.0" y="60" width="373" height="55"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o1l-XO-7hH">
+                                                <rect key="frame" x="0.0" y="0.0" width="82.666666666666671" height="55"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal">
+                                                    <imageReference key="image" image="pencil.and.scribble" catalog="system" symbolScale="default" variableValue="1"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40" scale="large" weight="regular"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onWriteCommand:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XdD-72-v1f"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYH-0F-lXa">
+                                                <rect key="frame" x="105.66666666666667" y="0.0" width="59.666666666666671" height="55"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal">
+                                                    <imageReference key="image" image="point.bottomleft.forward.to.point.topright.filled.scurvepath" catalog="system" symbolScale="default" variableValue="1"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40" scale="large" weight="regular"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="drawCurveCommand:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q4I-OH-lKj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evc-vW-V12">
+                                                <rect key="frame" x="188.33333333333334" y="0.0" width="79.333333333333343" height="55"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal">
+                                                    <imageReference key="image" image="eraser.line.dashed" catalog="system" symbolScale="default" variableValue="1"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40" scale="large" weight="regular"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="deleteShapeCommand:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vix-wD-ENM"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TQK-p7-DqU">
+                                                <rect key="frame" x="290.66666666666669" y="0.0" width="82.333333333333314" height="55"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal">
+                                                    <imageReference key="image" image="trash" catalog="system" symbolScale="default" variableValue="1"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40" scale="large" weight="regular"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="deleteAllDrawings:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8R0-i5-DBF"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="oKg-AC-MYG"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="NO"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="VBe-Nx-wtC">
+                                        <rect key="frame" x="0.0" y="125" width="373" height="55"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCh-LF-yBP">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="55"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal">
+                                                    <imageReference key="image" image="hand.point.up.left" catalog="system" symbolScale="default" variableValue="1"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40" scale="large" weight="regular"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="selectShapeCommand:" destination="BYZ-38-t0r" eventType="touchUpInside" id="od1-2Y-FRB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2e-nt-Aya">
+                                                <rect key="frame" x="63" y="0.0" width="45.333333333333343" height="55"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal">
+                                                    <imageReference key="image" image="circle" catalog="system" symbolScale="default" variableValue="1"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40" scale="large" weight="regular"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="drawCircleCommand:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mZA-tp-czO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pp8-Kp-cAe">
+                                                <rect key="frame" x="131.33333333333334" y="0.0" width="45.333333333333343" height="55"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal">
+                                                    <imageReference key="image" image="circle.righthalf.filled" catalog="system" symbolScale="default" variableValue="1"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40" scale="large" weight="regular"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="drawArcCommand:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VlR-vE-AaI"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2k-72-tqW">
+                                                <rect key="frame" x="199.66666666666666" y="0.0" width="47.333333333333343" height="55"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal">
+                                                    <imageReference key="image" image="triangle" catalog="system" symbolScale="default" variableValue="1"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40" scale="large" weight="regular"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="drawTriangleCommand:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wv6-4F-7e1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4u-M8-zFs">
+                                                <rect key="frame" x="270" y="0.0" width="44.666666666666686" height="55"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal">
+                                                    <imageReference key="image" image="square" catalog="system" symbolScale="default" variableValue="1"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40" scale="large" weight="regular"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="drawRectangleCommand:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qg3-3F-EiD"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JW9-bj-GSJ">
+                                                <rect key="frame" x="337.66666666666669" y="0.0" width="35.333333333333314" height="55"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal">
+                                                    <imageReference key="image" image="line.diagonal" catalog="system" symbolScale="default" variableValue="1"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40" scale="large" weight="regular"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="drawLineCommand:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JPJ-IW-G3M"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="Nke-hL-DXv"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="NO"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LGr-sC-H6r">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="633"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="0.55556705298013243" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="LGr-sC-H6r" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8DL-Im-OTp"/>
+                            <constraint firstItem="Ixx-Fo-rbB" firstAttribute="top" secondItem="LGr-sC-H6r" secondAttribute="bottom" constant="5" id="Ewg-Gx-X4u"/>
+                            <constraint firstAttribute="trailing" secondItem="LGr-sC-H6r" secondAttribute="trailing" id="XCG-nW-vKM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ixx-Fo-rbB" secondAttribute="bottom" id="aUV-oH-UZQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ixx-Fo-rbB" secondAttribute="trailing" constant="10" id="bvO-lv-ME0"/>
+                            <constraint firstItem="LGr-sC-H6r" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cJD-hf-Ub4"/>
+                            <constraint firstItem="Ixx-Fo-rbB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="uV8-d6-jrF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="arcB" destination="Pp8-Kp-cAe" id="6Nh-gN-pT0"/>
+                        <outlet property="circleB" destination="R2e-nt-Aya" id="OP5-Cq-8AP"/>
+                        <outlet property="curveB" destination="rYH-0F-lXa" id="vZR-vs-bVx"/>
+                        <outlet property="deleteB" destination="evc-vW-V12" id="XOV-Lh-LJB"/>
+                        <outlet property="drawingView" destination="LGr-sC-H6r" id="TD6-Qi-uUC"/>
+                        <outlet property="fillColor" destination="VFu-j8-cMQ" id="9gm-oR-PRh"/>
+                        <outlet property="fillSwitch" destination="ddu-is-TPu" id="DSh-Jp-F2s"/>
+                        <outlet property="lineB" destination="JW9-bj-GSJ" id="Ekg-HK-1Px"/>
+                        <outlet property="lineWidthSlider" destination="ImL-IV-deW" id="Mc4-h1-aAJ"/>
+                        <outlet property="penB" destination="o1l-XO-7hH" id="uUt-6Z-bog"/>
+                        <outlet property="selectB" destination="WCh-LF-yBP" id="8N4-bh-frp"/>
+                        <outlet property="squareB" destination="b4u-M8-zFs" id="9li-qx-NCf"/>
+                        <outlet property="strokeColor" destination="ovp-OS-Lvv" id="zKh-DZ-QOi"/>
+                        <outlet property="triangleB" destination="X2k-72-tqW" id="KvS-Gg-XPD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-22.137404580152669" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="circle" catalog="system" width="128" height="123"/>
+        <image name="circle.righthalf.filled" catalog="system" width="128" height="123"/>
+        <image name="eraser.line.dashed" catalog="system" width="128" height="108"/>
+        <image name="hand.point.up.left" catalog="system" width="119" height="128"/>
+        <image name="line.diagonal" catalog="system" width="128" height="113"/>
+        <image name="pencil.and.scribble" catalog="system" width="128" height="86"/>
+        <image name="point.bottomleft.forward.to.point.topright.filled.scurvepath" catalog="system" width="117" height="128"/>
+        <image name="square" catalog="system" width="128" height="114"/>
+        <image name="trash" catalog="system" width="117" height="128"/>
+        <image name="triangle" catalog="system" width="128" height="109"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

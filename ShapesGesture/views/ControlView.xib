@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <visualEffectView opaque="NO" contentMode="scaleToFill" id="d6Y-9u-fM7">
+            <rect key="frame" x="0.0" y="0.0" width="262" height="420"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="74y-ef-NKx">
+                <rect key="frame" x="0.0" y="0.0" width="262" height="420"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PUM-V6-Brd">
+                        <rect key="frame" x="22" y="0.0" width="240" height="420"/>
+                    </stackView>
+                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3VP-C7-WX1">
+                        <rect key="frame" x="0.0" y="0.0" width="22" height="420"/>
+                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="zJK-bm-Uu5">
+                            <rect key="frame" x="0.0" y="0.0" width="22" height="420"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        </view>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="22" id="FTC-PP-Tnr"/>
+                        </constraints>
+                        <vibrancyEffect>
+                            <blurEffect style="regular"/>
+                        </vibrancyEffect>
+                    </visualEffectView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="3VP-C7-WX1" firstAttribute="leading" secondItem="74y-ef-NKx" secondAttribute="leading" id="IaJ-tL-PLM"/>
+                    <constraint firstAttribute="bottom" secondItem="PUM-V6-Brd" secondAttribute="bottom" id="PqG-Gc-0Kw"/>
+                    <constraint firstItem="3VP-C7-WX1" firstAttribute="top" secondItem="74y-ef-NKx" secondAttribute="top" id="Vkl-rr-TAa"/>
+                    <constraint firstAttribute="bottom" secondItem="3VP-C7-WX1" secondAttribute="bottom" id="Vno-8B-kNA"/>
+                    <constraint firstItem="PUM-V6-Brd" firstAttribute="leading" secondItem="3VP-C7-WX1" secondAttribute="trailing" id="bjX-Fi-o64"/>
+                    <constraint firstItem="PUM-V6-Brd" firstAttribute="top" secondItem="74y-ef-NKx" secondAttribute="top" id="ck0-eN-wBf"/>
+                    <constraint firstItem="PUM-V6-Brd" firstAttribute="leading" secondItem="3VP-C7-WX1" secondAttribute="trailing" id="muD-2m-s6E"/>
+                    <constraint firstAttribute="trailing" secondItem="PUM-V6-Brd" secondAttribute="trailing" id="vhe-wg-p7g"/>
+                </constraints>
+            </view>
+            <blurEffect style="regular"/>
+            <point key="canvasLocation" x="-403.05343511450383" y="-218.3098591549296"/>
+        </visualEffectView>
+    </objects>
+</document>
